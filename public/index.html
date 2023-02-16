@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>Icono.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body class="overflow-hidden w-screen h-screen">    
+    <main id="LoaderHome" class="w-screen h-screen fixed overflow-hidden bg-gray-100 dark:bg-Prt300 flex justify-center items-center z-50">    
+      <div class="w-65vw h-65vw MnSm:w-72 MnSm:h-72 relative">
+        <div class="w-full h-full flex justify-center items-center bg-gray-100 dark:bg-Prt300 relative z-10 rounded-full">
+          <span class="text-Prt60 dark:text-Prt240 font-bold font-Poppins text-2vw MnSm:text-3xl">Cargando cv...</span>
+        </div>
+        <div class="absolute bg-PreloaderLight dark:bg-PreloaderDark -top-3 -left-3 -right-3 -bottom-3 rounded-full PrlAnimation"></div>
+      </div>
+    </main>
+    <div id="app"></div>    
+  </body> 
+</html>
