@@ -11,11 +11,9 @@ require('vue2-animate/dist/vue2-animate.min.css')
 
 
 axios.defaults.baseURL = 'https://portafolio-web-backend.fly.dev' 
-axios.defaults.withCredentials = true
 
 
 store.dispatch('GetTheme')
-store.dispatch('VrfData').then(()=>{    
-    axios.defaults.headers = {'auth-token': store.state.Jwt}
+store.dispatch('VrfData').then(()=>{        
     createApp(App).use(store).use(router).use(VueAxios, axios).mount('#app')
 })

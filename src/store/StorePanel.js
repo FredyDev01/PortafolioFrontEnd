@@ -103,7 +103,7 @@ export default {
         puede tardar algunos segundos.`
       })      
       try{                                                                                       
-        await axios({url: `/${state.ShowSeccion}/NewData`, data: Content, headers: {'Content-type': 'application/json'}})        
+        await axios({url: `/${state.ShowSeccion}/NewData`, data: Content, headers: {'Content-type': 'application/json', 'auth-token': store.state.Jwt.Token}})        
         store.commit('ShowMessage', {
           Err: false, 
           tlt: 'Registro exitoso', 
@@ -152,7 +152,7 @@ export default {
         del elemento seleccionado, esto puede tardar algunos segundos.`
       })      
       try{                 
-        await axios({url: `/${state.ShowSeccion}/EditData/${Data.Id}`, method: 'PUT', data: Data.Content, headers: {'Content-type': 'application/json'}})
+        await axios({url: `/${state.ShowSeccion}/EditData/${Data.Id}`, method: 'PUT', data: Data.Content, headers: {'Content-type': 'application/json', 'auth-token': store.state.Jwt.Token}})
         store.commit('ShowMessage', {
           Err: false, 
           tlt: 'Edicion exitosa', 
@@ -191,7 +191,7 @@ export default {
             esperar hasta entonces.`
           })
           try{          
-            const Consult = await axios({url: `/${state.ShowSeccion}/DeleteData/${Id}`, method: 'DELETE'})                                 
+            const Consult = await axios({url: `/${state.ShowSeccion}/DeleteData/${Id}`, method: 'DELETE', headers: {'auth-token': store.state.Jwt.Token}})                                 
             store.commit('ShowMessage', {
               Err: false, 
               tlt: 'Eliminación correcta', 
