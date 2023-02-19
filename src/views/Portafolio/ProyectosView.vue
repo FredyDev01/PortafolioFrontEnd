@@ -15,9 +15,9 @@
                     <div class="relative w-11/12 MdXs:w-3/4 MnSm:w-auto mr-0 MnSm:mr-6">
                         <select @change="DataInp.Tipo = $event.target.value" v-model="DataInp.Tipo" class="w-full py-3 pl-3 pr-16 2md:pr-20 bg-transparent border-2 border-gray-300 dark:border-gray-600 rounded-md appearance-none focus:outline-none text-gray-400 dark:text-gray-500">
                             <option value="">Tipo de proyecto</option>
-                            <option value="Web">Web</option>
-                            <option value="Aplicacion">Aplicativo movil</option>
-                            <option value="Programa">Programa</option>
+                            <option value="Proyecto-Web">Proyecto web</option>
+                            <option value="Aplicacion-movil">Aplicacion movil</option>
+                            <option value="Programa-de-PC">Programa de PC</option>
                         </select>
                         <div class="absolute inset-y-0 right-0 px-3 pointer-events-none text-gray-400 dark:text-gray-500 flex items-center">
                             <svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>

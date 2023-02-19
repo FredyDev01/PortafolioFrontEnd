@@ -103,7 +103,7 @@ export default {
         puede tardar algunos segundos.`
       })      
       try{                                                                                       
-        await axios({url: `/${state.ShowSeccion}/NewData`, data: Content, headers: {'Content-type': 'application/json', 'auth-token': store.state.Jwt.Token}})        
+        await axios({url: `/${state.ShowSeccion}/NewData`, method: 'POST', data: Content, headers: {'Content-type': 'application/json', 'auth-token': store.state.Jwt.Token}})        
         store.commit('ShowMessage', {
           Err: false, 
           tlt: 'Registro exitoso', 

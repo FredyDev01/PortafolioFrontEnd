@@ -93,10 +93,8 @@ export default{
             this.DataModal.Descripcion = Data.Descripcion || ''
             this.DataModal.Nivel = Data.Nivel || ''
         },
-        async UploadImage(e){
-            const Test = await this.GetBase64(e)
-            console.log(Test)
-            this.DataModal.Base64Image = Test
+        async UploadImage(e){                        
+            this.DataModal.Base64Image = await this.GetBase64(e)
         },
         async New(){
             const Consult = await this.Nuevo(JSON.stringify(this.DataModal))
