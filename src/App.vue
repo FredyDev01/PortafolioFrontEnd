@@ -19,10 +19,10 @@
             <i @click="ChangeTheme()" class="table-cell align-middle mx-auto cursor-pointer text-black dark:text-white text-base" :class="[Theme == 'light' ? 'fas fa-sun' : 'far fa-moon']"></i>
           </li>            
           <li class="my-3 mx-7 bg-Prt30 dark:bg-gray-600 hidden 1md:block" style="padding-left: 1px; padding-right: 1px"></li>          
-          <li v-show="false" class="mt-5 1md:mt-0 mx-auto flex items-center">
+          <li v-show="!Jwt" class="mt-5 1md:mt-0 mx-auto flex items-center">
             <router-link @click="SetSeccion('Loguin')" class="px-3 py-2.5 bg-BtnLight dark:bg-BtnDark rounded-md text-white text-1/2xs 1/2lg:text-xs" to="/Loguin">Login <i class="ml-1.5 fa-solid fa-right-to-bracket text-xxs"></i></router-link>
           </li>            
-          <li v-show="true" class="mt-5 1md:mt-0 mx-auto flex flex-col justify-center items-center text-1/2xs 1/2lg:text-xs">              
+          <li v-show="Jwt" class="mt-5 1md:mt-0 mx-auto flex flex-col justify-center items-center text-1/2xs 1/2lg:text-xs">              
             <button @click="Dropdown = !Dropdown" class="px-3 py-2.5 bg-BtnLight dark:bg-BtnDark rounded-md text-white ActiveDrw">Gestionar <i class="ml-1.5 fas fa-angle-down text-xxs"></i></button>                                                                                                      
             <ul v-show="Dropdown" class="w-fit mx-auto mt-4 1md:mt-0 bg-white dark:bg-Prt310 1md:dark:bg-Prt260 border-2 border-Prt30 dark:border-Prt200 rounded-1/2md 1md:rounded-t-none relative 1md:absolute 1md:top-full overflow-hidden text-gray-400 dark:text-Prt160 text-center">
               <li class="min-w-max py-2"><router-link @click="SetSeccion('Panel')" class="w-fit px-3.5 py-2 transition duration-500 hover:bg-Prt20 dark:hover:bg-gray-800 1md:dark:hover:bg-Prt200" to="/Panel"><i class="mr-1.5 fas fa-file-alt"></i> Mis datos</router-link></li>              
