@@ -16,5 +16,6 @@ axios.defaults.withCredentials = true
 
 store.dispatch('GetTheme')
 store.dispatch('VrfData').then(()=>{    
+    axios.defaults.headers = {'auth-token': store.state.Jwt}
     createApp(App).use(store).use(router).use(VueAxios, axios).mount('#app')
 })
