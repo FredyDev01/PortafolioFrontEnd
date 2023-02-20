@@ -9,21 +9,21 @@
                     interfaz.
                 </p>
             </div>
-        </header>          
-        <main class="w-full bg-gray-100 dark:bg-Prt260 overflow-x-scroll md:overflow-auto">
-            <div class="grid grid-cols-3 text-gray-400 dark:text-Prt160 font-Chakra text-sm" style="min-width: 810px !important">
-                <button @click="ChangeTable('Conocimientos')" class="col-span-1 py-4 border-b-2" :class="[ShowSeccion == 'Conocimientos' ? 'bg-white dark:bg-gray-700 border-white dark:border-gray-700' : 'border-gray-200 dark:border-Prt180 transition duration-300 hover:bg-white dark:hover:bg-gray-700']"><i class="mr-1.5 fas fa-graduation-cap text-base"></i> Gestionar conocimientos</button>
-                <button @click="ChangeTable('Habilidades')" class="col-span-1 py-4 border-l-2 border-r-2 border-gray-200 dark:border-Prt180" :class="[ShowSeccion == 'Habilidades' ? 'bg-white dark:bg-gray-700' : 'border-b-2 transition duration-300 hover:bg-white dark:hover:bg-gray-700']"><i class="mr-1.5 fas fa-hands-helping text-base"></i> Gestionar habilidades</button>
-                <button @click="ChangeTable('Proyectos')" class="col-span-1 py-4 border-b-2" :class="[ShowSeccion == 'Proyectos' ? 'bg-white dark:bg-gray-700 border-white dark:border-gray-700' : 'border-gray-200 dark:border-Prt180 transition duration-300 hover:bg-white dark:hover:bg-gray-700']"><i class="mr-1.5 fas fa-laptop-code text-base"></i> Gestionar proyectos</button>
+        </header> 
+        <main class="w-full bg-gray-100 dark:bg-Prt260 border-b-2 border-gray-200 dark:border-gray-700 overflow-x-scroll sm:overflow-auto">            
+            <div class="min-w-VwMenu px-5 pb-5 pt-2 flex flex-wrap justify-center font-Ubuntu text-xs 1/2lg:text-sm">
+                <button @click="ChangeTable('Conocimientos')" class="px-4 py-3 mt-3 rounded-full border-indigo-400 dark:border-emerald-600 font-light" :class="[ShowSeccion == 'Conocimientos' ? 'bg-indigo-400 dark:bg-emerald-600 shadow-lg text-white' : 'border text-indigo-400 dark:text-emerald-600 transition duration-300 hover:bg-indigo-400 dark:hover:bg-emerald-600 hover:text-white dark:hover:text-white']"><i class="fas fa-graduation-cap mr-2"></i> Gest. conocimientos</button>
+                <button @click="ChangeTable('Habilidades')" class="px-4 py-3 mt-3 mx-5 rounded-full border-indigo-400 dark:border-emerald-600 font-light" :class="[ShowSeccion == 'Habilidades' ? 'bg-indigo-400 dark:bg-emerald-600 shadow-lg text-white' : 'border text-indigo-400 dark:text-emerald-600 transition duration-300 hover:bg-indigo-400 dark:hover:bg-emerald-600 hover:text-white dark:hover:text-white']"><i class="fas fa-hands-helping mr-2"></i> Gest. habilidades</button>
+                <button @click="ChangeTable('Proyectos')" class="px-4 py-3 mt-3 rounded-full border border-indigo-400 dark:border-emerald-600 font-light" :class="[ShowSeccion == 'Proyectos' ? 'bg-indigo-400 dark:bg-emerald-600 shadow-lg text-white' : 'text-indigo-400 dark:text-emerald-600 transition duration-300 hover:bg-indigo-400 dark:hover:bg-emerald-600 hover:text-white dark:hover:text-white']"><i class="far fa-file-code mr-2"></i> Gest. proyectos</button>
             </div>
-        </main>
+        </main>         
         <section class="py-28 max-w-screen-1/2xl mx-auto">                        
             <div class="px-0 md:px-10 mb-7 md:mb-20 flex items-start md:items-center flex-col md:flex-row">
                 <h1 class="px-10 md:px-0 table text-gray-700 dark:text-white font-bold font-OpenSans text-xl 1/2lg:text-2xl">Tabla {{ShowSeccion.toLowerCase()}}<hr class="border-0 border-b-4 rounded-full border-indigo-500 dark:border-emerald-600 w-1/3 mt-1"></h1>
                 <div class="w-full md:w-auto flex-auto flex flex-col md:flex-row justify-end items-start md:items-center">
                     <div class="w-full md:w-auto py-7 md:py-0 mt-10 md:mt-0 mb-16 md:mb-0 bg-gray-100 dark:bg-Prt300 md:bg-transparent">
                         <form @submit.prevent="SetDataFilt({Busq: TxtBusq})" class="w-80% MdXs:w-70% MnSm:w-60% sm:w-55% md:w-full mx-auto md:mx-0 flex">
-                            <input v-model="TxtBusq" type="text" class="w-full md:w-48 pl-3 pr-10 py-3 bg-white dark:bg-gray-700 md:bg-transparent rounded-l-md border-2 border-r-0 border-gray-300 dark:border-gray-700 md:dark:border-Prt180 transition duration-300 focus:outline-none focus:border-indigo-500 dark:focus:border-emerald-700 placeholder:text-gray-400 dark:placeholder:text-gray-500 dark:text-white text-2xs" placeholder="Buscar registro">
+                            <input v-model="TxtBusq" type="text" class="w-full md:w-48 pl-3 pr-10 py-3 bg-white dark:bg-gray-700 md:bg-transparent rounded-l-md border-2 border-r-0 border-white dark:border-gray-700 md:border-gray-300 md:dark:border-Prt180 transition duration-300 focus:outline-none focus:border-indigo-500 dark:focus:border-emerald-700 placeholder:text-gray-400 dark:placeholder:text-gray-500 dark:text-white text-2xs" placeholder="Buscar registro">
                             <button type="submit" class="px-3.5 md:px-3 bg-indigo-400 dark:bg-emerald-600 transition duration-300 hover:bg-indigo-500 dark:hover:bg-emerald-700 rounded-r-md">
                                 <i class="fas fa-search text-white text-xs"></i>
                             </button>

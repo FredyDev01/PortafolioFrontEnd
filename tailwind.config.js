@@ -759,7 +759,8 @@ module.exports = {
       min: 'min-content',
       max: 'max-content',
       fit: 'fit-content',
-      'VwModel': '450px',
+      'VwMenu': '640px',
+      'VwModel': '450px'      
     },
     objectPosition: {
       bottom: 'bottom',

@@ -4,7 +4,7 @@
             <thead class="bg-gray-100 dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-800 text-gray-500 dark:text-white text-center text-sm">
                 <tr scope="col">
                     <input @change="SetDataFilt({Ord: DataFilt.Ord == -1 ? 1 : -1})" type="checkbox" id="inpOrden" hidden>                    
-                    <th class="py-5 px-2">Id <label for="inpOrden"><i class="text-xxs bg-Prt70 dark:bg-Prt310 transition duration-300 hover:bg-OnBtnLight dark:hover:bg-gray-700 text-white px-2 py-1 rounded-md ml-2 cursor-pointer fas" :class="[DataFilt.Ord == 1 ?  'fas fa-angle-down' : 'fa-angle-up']"> </i></label></th>
+                    <th class="py-5 px-2">Id <label for="inpOrden"><i class="text-xxs bg-Prt50 dark:bg-Prt310 transition duration-300 hover:bg-OnBtnLight dark:hover:bg-gray-700 text-white px-2 py-1 rounded-md ml-2 cursor-pointer fas" :class="[DataFilt.Ord == 1 ?  'fas fa-angle-down' : 'fa-angle-up']"> </i></label></th>
                     <th class="px-5">Tecnologia</th>
                     <th class="px-5">Nivel</th>
                     <th>Imagen</th>

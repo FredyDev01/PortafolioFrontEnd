@@ -11,7 +11,7 @@
         </button>
       </div>           
       <div class="w-full 1md:w-auto flex-auto 1md:flex-none top-16 1md:top-0 fixed 1md:relative inset-0 -left-full 1md:left-0 overflow-y-scroll 1md:overflow-y-visible transition-all 1md:transition-none duration-500" :class="[Open ? 'left-0 opacity-100' : '-left-full opacity-0 1md:opacity-100']">                
-        <ul class="min-h-full min-w-full py-16 1md:py-0 inline-flex flex-col 1md:flex-row justify-center items-center 1md:items-stretch bg-gray-100 1md:bg-transparent dark:bg-gray-700 1md:dark:bg-transparent font-light font-Chakra text-sm">                    
+        <ul class="min-h-full min-w-full py-16 1md:py-0 inline-flex flex-col 1md:flex-row justify-center items-center 1md:items-stretch bg-gray-100 1md:bg-transparent dark:bg-gray-700 1md:dark:bg-transparent font-light font-Ubuntu text-sm">                    
           <li v-for="link in Links" :key="link" class="table mb-5 1md:mb-0 1md:mt-0.5 mx-auto 1md:mx-2 border-b-3" :class="[SeccActual != link.Nombre ? 'border-transparent' : 'pb-2 1md:pb-0 border-indigo-500 dark:border-emerald-600']">
             <router-link @click="SetSeccion(link.Nombre)" class="table-cell align-middle transition duration-300" :class="[SeccActual != link.Nombre ? 'text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white' : 'text-black dark:text-white']" :to="link.Path">{{ link.Nombre }}</router-link>
           </li>

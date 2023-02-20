@@ -34,7 +34,7 @@
                     </div>
                 </div>                                
                 <form @submit.prevent="DataInp.Busq = $event.target['TxtBusq'].value" class="w-full 1md:w-auto mb-5 MnSm:mb-8 1md:mb-0 py-7 1md:py-0 px-8 1/2sm:px-12 1md:px-0 bg-Prt40 dark:bg-Prt300 1md:bg-transparent 1md:dark:bg-transparent flex justify-center 1md:justify-start">                    
-                    <input type="text" id="TxtBusq" class="w-80% 1/2sm:w-80 1md:w-44 2md:w-48 py-3 px-3 1md:px-3 bg-white dark:bg-gray-700 1md:dark:bg-transparent 1md:bg-transparent rounded-l-1/2md 1md:rounded-l-md border-2 border-r-0 border-white 1md:border-gray-300 transition duration-300 focus:border-indigo-400 dark:border-gray-700 1md:dark:border-gray-600 focus:outline-none dark:focus:border-emerald-600 dark:placeholder:text-gray-500 text-black dark:text-white" placeholder="Buscar proyecto">
+                    <input type="text" id="TxtBusq" class="w-80% 1/2sm:w-80 1md:w-44 2md:w-48 px-3 1md:px-3 py-3 bg-white dark:bg-gray-700 1md:dark:bg-transparent 1md:bg-transparent rounded-l-1/2md 1md:rounded-l-md border-2 border-r-0 border-white 1md:border-gray-300 transition duration-300 focus:border-indigo-400 dark:border-gray-700 1md:dark:border-gray-600 focus:outline-none dark:focus:border-emerald-600 dark:placeholder:text-gray-500 text-black dark:text-white" placeholder="Buscar proyecto">
                     <button type="submit" class="px-3 bg-indigo-400 dark:bg-emerald-600 transition duration-300 hover:bg-indigo-500 dark:hover:bg-emerald-500 rounded-1/2md rounded-l-none 1md:rounded-md 1md:rounded-l-none table text-white"><i class="table-cell align-middle fas fa-search"></i></button>
                 </form>
             </div>        
