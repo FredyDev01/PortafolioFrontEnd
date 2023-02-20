@@ -4,6 +4,6 @@
             <span class="absolute h-full w-full opacity-75 bg-gray-300 dark:bg-white rounded-full inline-flex animate-ping"></span>
                 <span class="h-10 w-10 relative inline-flex bg-gray-300 dark:bg-white rounded-full"></span>
             </span>
-        <p class="mt-5 text-OnBtnLight dark:text-white font-bold font-Poppins text-2xl">Cargando...</p>                    
+        <p class="mt-5 text-Prt80 dark:text-white font-bold font-Poppins text-2xl">Cargando...</p>                    
     </div>
 </template>

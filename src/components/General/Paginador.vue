@@ -34,7 +34,7 @@ export default {
         ClickPage(Page){
             this.PageAct = Page
             this.$emit('ChangePag', this.PageAct)
-        },
+        },        
         ListPage(){                         
             if(this.Maxpage > 0){
                 if(this.Maxpage < this.PageAct) this.PageAct = this.Maxpage
@@ -52,7 +52,7 @@ export default {
                 this.ListPaginas = ListFinal
             }else this.ListPaginas = []
         }
-    },
+    },    
     mounted(){this.ListPage()}
 }
 </script>

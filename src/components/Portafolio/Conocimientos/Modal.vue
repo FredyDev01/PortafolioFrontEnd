@@ -20,13 +20,13 @@
                 </div>           
                 <div class="mt-10">
                     <h4 class="mb-1 text-gray-600 dark:text-gray-200 font-Silkscreen text-sm MnSm:text-base2">Funcionalidad:</h4>
-                    <p class="text-gray-500 dark:text-Prt140 text-1xs MnSm:text-2xs">
+                    <p class="text-Prt120 dark:text-Prt140 text-1xs MnSm:text-2xs">
                         {{DataModal ? DataModal.Resumen : ''}}
                     </p>
                 </div>
                 <div class="mt-8">
                     <h4 class="mb-1 text-gray-600 dark:text-gray-200 font-Silkscreen text-sm MnSm:text-base2">Mi DataShow:</h4>
-                    <p class="text-gray-500 dark:text-Prt140 text-1xs MnSm:text-2xs">                     
+                    <p class="text-Prt120 dark:text-Prt140 text-1xs MnSm:text-2xs">                     
                         {{DataModal ? DataModal.Descripcion : ''}}
                     </p> 
                 </div>                               
