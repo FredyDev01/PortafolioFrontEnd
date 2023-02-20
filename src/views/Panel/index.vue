@@ -10,8 +10,8 @@
                 </p>
             </div>
         </header> 
-        <main class="w-full bg-gray-100 dark:bg-Prt260 border-b-2 border-gray-200 dark:border-gray-700 overflow-x-scroll sm:overflow-auto">            
-            <div class="min-w-VwMenu px-5 pb-5 pt-2 flex flex-wrap justify-center font-Ubuntu text-xs 1/2lg:text-sm">
+        <main class="w-full px-5 pb-5 pt-2 bg-gray-100 dark:bg-Prt260 border-b-2 border-gray-200 dark:border-gray-700 overflow-x-scroll MdSm:overflow-auto">            
+            <div class="min-w-VwMenu flex flex-wrap justify-center font-Ubuntu text-xs 1/2lg:text-sm">
                 <button @click="ChangeTable('Conocimientos')" class="px-4 py-3 mt-3 rounded-full border-indigo-400 dark:border-emerald-600 font-light" :class="[ShowSeccion == 'Conocimientos' ? 'bg-indigo-400 dark:bg-emerald-600 shadow-lg text-white' : 'border text-indigo-400 dark:text-emerald-600 transition duration-300 hover:bg-indigo-400 dark:hover:bg-emerald-600 hover:text-white dark:hover:text-white']"><i class="fas fa-graduation-cap mr-2"></i> Gest. conocimientos</button>
                 <button @click="ChangeTable('Habilidades')" class="px-4 py-3 mt-3 mx-5 rounded-full border-indigo-400 dark:border-emerald-600 font-light" :class="[ShowSeccion == 'Habilidades' ? 'bg-indigo-400 dark:bg-emerald-600 shadow-lg text-white' : 'border text-indigo-400 dark:text-emerald-600 transition duration-300 hover:bg-indigo-400 dark:hover:bg-emerald-600 hover:text-white dark:hover:text-white']"><i class="fas fa-hands-helping mr-2"></i> Gest. habilidades</button>
                 <button @click="ChangeTable('Proyectos')" class="px-4 py-3 mt-3 rounded-full border border-indigo-400 dark:border-emerald-600 font-light" :class="[ShowSeccion == 'Proyectos' ? 'bg-indigo-400 dark:bg-emerald-600 shadow-lg text-white' : 'text-indigo-400 dark:text-emerald-600 transition duration-300 hover:bg-indigo-400 dark:hover:bg-emerald-600 hover:text-white dark:hover:text-white']"><i class="far fa-file-code mr-2"></i> Gest. proyectos</button>
