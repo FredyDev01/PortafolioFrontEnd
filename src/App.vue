@@ -67,10 +67,10 @@ export default{
     ...mapMutations(['SetSeccion', 'HiddenBody'])    
   },
   mounted(){
-    setTimeout(()=> {
+    this.$nextTick(()=> {
       document.getElementById('LoaderHome').style.display = 'none'
       this.HiddenBody(false)
-    }, 100)        
+    })
   }
 }
 </script>
