@@ -22,19 +22,19 @@
                 </div>           
                 <div class="mt-10">
                     <h4 class="mb-1 text-gray-600 dark:text-gray-200 font-Silkscreen text-sm MnSm:text-base2">Tipo de proyecto:</h4>
-                    <p class="text-Prt120 dark:text-Prt140 text-1xs MnSm:text-2xs">
+                    <p class="text-Prt160 dark:text-Prt140 text-1xs MnSm:text-2xs">
                         {{DataModal ? DataModal.Tipo : ''}}
                     </p>
                 </div>
                 <div class="mt-8">
                     <h4 class="mb-1 text-gray-600 dark:text-gray-200 font-Silkscreen text-sm MnSm:text-base2">Finalidad:</h4>
-                    <p class="text-Prt120 dark:text-Prt140 text-1xs MnSm:text-2xs">
+                    <p class="text-Prt160 dark:text-Prt140 text-1xs MnSm:text-2xs">
                         {{DataModal ? DataModal.Funcionalidad : ''}}
                     </p>
                 </div>
                 <div class="mt-8">
                     <h4 class="mb-1 text-gray-600 dark:text-gray-200 font-Silkscreen text-sm MnSm:text-base2">Resumen:</h4>
-                    <p class="text-Prt120 dark:text-Prt140 text-1xs MnSm:text-2xs">                    
+                    <p class="text-Prt160 dark:text-Prt140 text-1xs MnSm:text-2xs">                    
                         {{DataModal ? DataModal.Resumen : ''}}
                     </p> 
                 </div>                                       
