@@ -6,7 +6,7 @@
     <transition enter-active-class="animated zoomIn" leave-active-class="animated zoomOut">
         <div v-if="DataModal" class="fixed inset-0 w-full MnSm:max-w-VwModel h-full MnSm:h-fit MnSm:max-h-85vh m-auto bg-white dark:bg-gray-700 rounded-none MnSm:rounded-lg flex flex-col z-50 overflow-hidden" style="animation-duration: 0.7s">                            
             <header class="relative px-6 py-5 bg-indigo-500 dark:bg-emerald-600 flex">
-                <h1 class="w-full pr-5 truncate text-white font-bold font-Ubuntu text-lg MnSm:text-xl">Proyecto: {{DataModal ? DataModal.Titular : ''}}</h1>                        
+                <h1 class="w-full pr-5 truncate text-white font-bold font-Ubuntu text-lg MnSm:text-xl">Tecnologia: {{DataModal ? DataModal.Titular : ''}}</h1>                        
                 <i @click="this.$emit('close', false)" class="cursor-pointer text-indigo-400 dark:text-emerald-500 transition duration-200 hover:text-indigo-300 dark:hover:text-emerald-400 fas fa-times"></i>                        
             </header>  
             <main class="px-6 py-10 MnSm:py-8 flex-auto overflow-y-scroll Scroll text-Prt150 dark:text-gray-400 font-sans" :class="[Theme == 'light' ? 'Scroll-Light' : 'Scroll-Dark']">
@@ -25,7 +25,7 @@
                     </p>
                 </div>
                 <div class="mt-8">
-                    <h4 class="mb-1 text-gray-600 dark:text-gray-200 font-Silkscreen text-sm MnSm:text-base2">Mi DataShow:</h4>
+                    <h4 class="mb-1 text-gray-600 dark:text-gray-200 font-Silkscreen text-sm MnSm:text-base2">Conocimiento:</h4>
                     <p class="text-Prt160 dark:text-Prt140 text-1xs MnSm:text-2xs">                     
                         {{DataModal ? DataModal.Descripcion : ''}}
                     </p> 
