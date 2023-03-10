@@ -33,9 +33,9 @@
                             <i class="absolute left-3 fas fa-mobile-alt pointer-events-none text-Prt100 dark:text-Prt170"></i>    
                             <select v-model="DataModal.Tipo" class="w-full pl-8 pr-2 py-3 bg-gray-100 dark:bg-Prt250 border-2 border-gray-300 dark:border-Prt230 transition duration-300 focus:outline-none focus:border-indigo-400 dark:focus:border-emerald-700 rounded-md appearance-none text-Prt100 dark:text-Prt170" required>                                                                            
                                 <option class="bg-white text-black" value="">Tipo de proyecto</option>
-                                <option class="bg-white text-black" value="Proyecto-Web">Proyecto web</option>
-                                <option class="bg-white text-black" value="Aplicacion-movil">Aplicacion movil</option>
-                                <option class="bg-white text-black" value="Programa-de-PC">Programa de PC</option>
+                                <option class="bg-white text-black" value="Proyecto web">Proyecto web</option>
+                                <option class="bg-white text-black" value="Aplicacion movil">Aplicacion movil</option>
+                                <option class="bg-white text-black" value="Programa de pc">Programa de PC</option>
                             </select>
                             <i class="absolute right-3 fas fa-chevron-down pointer-events-none text-Prt100 dark:text-Prt170 text-xxs"></i>                                                                                       
                         </div>                            

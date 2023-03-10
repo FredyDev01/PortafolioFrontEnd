@@ -26,7 +26,7 @@
                     </td>
                     <td>
                         <div class="w-50% 2md:w-70% h-12 mx-auto flex items-center justify-center">
-                            <img class="mx-auto w-full h-full object-contain" :src="Dato.UrlImage + '?timestamp=' + new Date().toLocaleTimeString()" :alt="'Proyecto-'+Dato.Titular">
+                            <img class="mx-auto w-full h-full object-contain" :src="Dato.UrlImage" :alt="'Proyecto-'+Dato.Titular">
                         </div>
                     </td>
                     <td class="font-Maven text-xs">
