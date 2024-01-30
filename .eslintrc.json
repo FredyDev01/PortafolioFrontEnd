@@ -1,0 +1,104 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": ["standard", "eslint-config-prettier"],
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["vue", "import"],
+  "rules": {
+    "curly": ["error", "all"],
+    "no-param-reassign": ["error", { "props": false }],
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index"
+        ],
+        "newlines-between": "always",
+        "alphabetize": { "order": "asc", "caseInsensitive": true }
+      }
+    ],
+    "vue/attribute-hyphenation": [
+      "error",
+      "never",
+      { "ignore": ["custom-prop"] }
+    ],
+    "vue/attributes-order": [
+      "error",
+      {
+        "order": [
+          "DEFINITION",
+          "LIST_RENDERING",
+          "CONDITIONALS",
+          "RENDER_MODIFIERS",
+          "GLOBAL",
+          ["UNIQUE", "SLOT"],
+          "TWO_WAY_BINDING",
+          "OTHER_DIRECTIVES",
+          "OTHER_ATTR",
+          "EVENTS",
+          "CONTENT"
+        ],
+        "alphabetical": true
+      }
+    ],
+    "vue/order-in-components": [
+      "error",
+      {
+        "order": [
+          "el",
+          "name",
+          "key",
+          "parent",
+          "functional",
+          ["delimiters", "comments"],
+          ["components", "directives", "filters"],
+          "extends",
+          "mixins",
+          ["provide", "inject"],
+          "ROUTER_GUARDS",
+          "layout",
+          "middleware",
+          "validate",
+          "scrollToTop",
+          "transition",
+          "loading",
+          "inheritAttrs",
+          "model",
+          ["props", "propsData"],
+          "emits",
+          "setup",
+          "asyncData",
+          "data",
+          "fetch",
+          "head",
+          "computed",
+          "watch",
+          "watchQuery",
+          "LIFECYCLE_HOOKS",
+          "methods",
+          ["template", "render"],
+          "renderError"
+        ]
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [["@", "./src"]],
+        "extensions": [".js", ".vue", ".json"]
+      }
+    }
+  }
+}

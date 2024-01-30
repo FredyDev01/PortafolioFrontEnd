@@ -1,72 +1,78 @@
 import { createRouter, createWebHistory } from 'vue-router'
+
 import store from '@/store'
 
-
-const routes = [  
+const routes = [
   {
     path: '/',
-    component: ()=> import('../views/Portafolio/index.vue'),
+    component: () => import('@/views/Portfolio/ViewPortfolio.vue'),
+    meta: { title: 'Portafolio' },
     children: [
       {
         path: '/',
-        name: 'Prt_Inicio',
-        component: () => import('../views/Portafolio/InicioView.vue')
+        name: 'viewHome',
+        component: () => import('@/views/Portfolio/ViewHome.vue'),
       },
       {
-        path: 'Capacidades',
-        name: 'Prt_Capacidades',
-        component: () => import('../views/Portafolio/CapacidadesView.vue')
+        path: 'capacidades',
+        name: 'viewCapabilities',
+        component: () => import('@/views/Portfolio/ViewCapabilities.vue'),
       },
       {
-        path: 'Proyectos',
-        name: 'Prt_Proyectos',
-        component: () => import('../views/Portafolio/ProyectosView.vue')
+        path: 'proyectos',
+        name: 'viewProject',
+        component: () => import('@/views/Portfolio/ViewProject.vue'),
       },
       {
-        path: 'Contacto',
-        name: 'Prt_Contacto',
-        component: () => import('../views/Portafolio/ContactoView.vue')
+        path: 'contacto',
+        name: 'viewContact',
+        component: () => import('@/views/Portfolio/ViewContact.vue'),
       },
-
-      {    
+      {
         path: ':pathMatch(.*)',
-        redirect: '/'
-      }
-    ]
+        redirect: '/',
+      },
+    ],
   },
   {
-    path: '/Loguin',
-    name: 'Pnl_Loguin',
-    component: () => import('../views/Loguin/index.vue'),
-    meta: {rutaProtegida: true}
+    path: '/loguin',
+    name: 'viewLogin',
+    component: () => import('@/views/Loguin/ViewLogin.vue'),
+    meta: { title: 'Login', routeProtected: true },
   },
   {
-    path: '/Panel',
-    name: 'Pnl_Admin',
-    component: () => import('../views/Panel/index.vue'),    
-    meta: {rutaProtegida: true}
+    path: '/panel',
+    name: 'viewPanel',
+    component: () => import('@/views/Panel/ViewPanel.vue'),
+    meta: { title: 'Panel', routeProtected: true },
   },
 ]
 
-
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
+  routes,
 })
 
-
-router.beforeEach(async(to, from, next)=>{  
-  const VerfRutaProtegia = to.matched.some(item => item.meta.rutaProtegida)  
-  if(VerfRutaProtegia){    
-    if(to.name == 'Pnl_Loguin'){
-      if(store.state.Jwt.Token) next('/')
-      else next()      
-    }else if(to.name == 'Pnl_Admin'){
-      if(!store.state.Jwt.Token) next('/')
-      else next()      
+router.beforeEach(async (to, from, next) => {
+  const isRouteProtected = to.matched.some((item) => item.meta.routeProtected)
+  document.title = 'FredyDev01 - ' + to.meta.title
+  if (isRouteProtected) {
+    if (to.name === 'viewLogin') {
+      if (store.state.jwt.token) {
+        next('/')
+      } else {
+        next()
+      }
+    } else if (to.name === 'viewPanel') {
+      if (!store.state.jwt.token) {
+        next('/')
+      } else {
+        next()
+      }
     }
-  }else next()  
+  } else {
+    next()
+  }
 })
-
 
 export default router

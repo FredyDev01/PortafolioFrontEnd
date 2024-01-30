@@ -1,19 +1,26 @@
-import { createApp } from 'vue'
-import router from './router'
-import App from './App.vue'
-import store from './store'
-import axios from 'axios'
-import VueAxios from 'vue-axios'
-import '@splidejs/vue-splide/css'
+import 'vue2-animate/dist/vue2-animate.min.css'
 import './assets/tailwind.css'
 import './assets/fonts.css'
-require('vue2-animate/dist/vue2-animate.min.css')
+import '@splidejs/vue-splide/css'
+import axios from 'axios'
+import { createApp } from 'vue'
+import VueAxios from 'vue-axios'
 
+import { getTheme } from '@/utils/appearance'
+import { verificationToken } from '@/utils/token'
 
-axios.defaults.baseURL = 'https://portafolio-web-backend.fly.dev' 
+import App from './App.vue'
+import router from './router'
+import store from './store'
 
+axios.defaults.baseURL = 'https://portafolio-web-backend.fly.dev'
 
-store.dispatch('GetTheme')
-store.dispatch('VrfData').then(()=>{        
-    createApp(App).use(store).use(router).use(VueAxios, axios).mount('#app')
+getTheme()
+verificationToken().then(() => {
+  if (store.state.jwt.token) {
+    axios.defaults.headers = {
+      authorization: store.state.jwt.token,
+    }
+  }
+  createApp(App).use(store).use(router).use(VueAxios, axios).mount('#app')
 })
